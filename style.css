@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+.header {
+    height: 30vh;
+    background-image: url(images/main_header_bg.JPG);
+    background-size: cover;
+    background-position: bottom;
+
+
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+#logo {
+    height: 30vh;
+}
+
+#title {
+    color: white;
+    font-size: 7rem;
+}
