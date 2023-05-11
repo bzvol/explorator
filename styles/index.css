@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Merienda:wght@400;700;900&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&display=swap');
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    height: 100%;
+}
+
+body.preload * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+.header {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+}
+
+.header h1 {
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.header__nav-open {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+
+    font-size: 1.7em;
+}
+
+.header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    
+    background: #eee;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    border-bottom-left-radius: 1rem;
+    
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out;
+}
+
+.header__nav-active {
+    transform: translateX(0);
+}
+
+.header__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    list-style: none;
+    padding: 2rem;
+    margin-bottom: 0;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header__nav-close {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .header h1 {
+        font-size: calc(0.75em + 1.5vw);
+    }
+    
+    .header__nav {
+        all: unset;
+
+        display: flex;
+        align-items: center;
+        border-radius: .5rem;
+
+        font-family: 'Playfair Display SC', serif;
+        font-weight: 700;
+    }
+
+    .header__nav ul {
+        flex-direction: row;
+        padding: 0;
+        gap: 1.5rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background: #222;
+        color: #fff;
+    }
+
+    .header {
+        border-color: #fff;
+    }
+
+    .header h1 {
+        background: rgb(33,162,126);
+        background: linear-gradient(48deg, rgba(33,162,126,1) 0%, rgba(0,185,255,1) 70%, rgba(0,212,255,1) 90%, rgba(133,233,255,1) 100%); 
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .header__nav {
+        background: #292929;
+    }
+
+    .header__nav-toggle {
+        color: #fff;
+    }
+}
