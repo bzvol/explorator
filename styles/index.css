@@ -30,9 +30,10 @@ h1, h2, h3 {
 }
 
 .radial-blue-bg {
-    background: rgb(151,228,245);
-    background: radial-gradient(circle at top, rgba(151,228,245,1) 5%, rgba(105,231,255,1) 20%, rgba(127,216,250,1) 45%, rgba(19,216,221,1) 90%),
-                radial-gradient(circle at bottom, rgba(151,228,245,1) 5%, rgba(105,231,255,1) 20%, rgba(127,216,250,1) 45%, rgba(19,216,221,1) 90%);
+    --alpha: 1;
+    background: rgba(151,228,245,var(--alpha));
+    background: radial-gradient(circle at top, rgba(151,228,245,1) 5%, rgba(105,231,255,var(--alpha)) 20%, rgba(127,216,250,var(--alpha)) 45%, rgba(19,216,221,var(--alpha)) 90%),
+                radial-gradient(circle at bottom, rgba(151,228,245,var(--alpha)) 5%, rgba(105,231,255,var(--alpha)) 20%, rgba(127,216,250,var(--alpha)) 45%, rgba(19,216,221,var(--alpha)) 90%);
 }
 
 .header {
@@ -137,8 +138,40 @@ section {
     max-height: 50vh;
 }
 
-.section-images {
-    
+.section-images__wrapper {
+    background: #f0ede5;
+    padding: .5rem .5rem 1.5rem;
+    box-shadow: 0 .5rem .25rem rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.section-images__wrapper img {
+    height: 15em;
+    width: 11.25em;
+    object-fit: cover;
+    object-position: attr(data-pos, center);
+}
+
+.section-images__wrapper-large {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    padding: 1.5rem;
+    background:rgba(0, 0, 0, 0.75);
+    box-shadow: none;
+    z-index: 1;
+
+    display: grid;
+    place-items: center;
+}
+
+.section-images__wrapper-large img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: default;
+    user-select: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -165,12 +198,20 @@ section {
         background-color: transparent;
         transform: translateY(-.25rem);
     }
+
+    .section-images__wrapper:nth-child(even) {
+        margin-bottom: 2.5rem;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     html, body {
         background: #222;
         color: #fff;
+    }
+
+    .radial-blue-bg {
+        --alpha: 0.5;
     }
 
     .header {
