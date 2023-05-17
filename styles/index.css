@@ -36,6 +36,18 @@ h1, h2, h3 {
                 radial-gradient(circle at bottom, rgba(151,228,245,var(--alpha)) 5%, rgba(105,231,255,var(--alpha)) 20%, rgba(127,216,250,var(--alpha)) 45%, rgba(19,216,221,var(--alpha)) 90%);
 }
 
+.contrast-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    filter: contrast(0.5);
+    z-index: -1;
+}
+
 .header {
     position: relative;
     border-bottom: 2px solid #ccc;
@@ -115,15 +127,6 @@ section {
     text-align: justify;
 }
 
-.section-intro::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url(../images/intro_bg.JPG) no-repeat center bottom fixed;
-    filter: contrast(0.5);
-    z-index: -1;
-}
-
 .section-intro__flex {
     max-width: min(100%, 1200px);
 }
@@ -172,6 +175,10 @@ section {
     max-height: 100%;
     cursor: default;
     user-select: none;
+}
+
+.section-videos__title h3 {
+    font-size: 1em;
 }
 
 @media screen and (min-width: 768px) {
@@ -234,7 +241,7 @@ section {
         color: #fff;
     }
 
-    .section-intro::before {
+    .contrast-bg::before {
         filter: contrast(0.75) brightness(0.65);
     }
 }

@@ -14,3 +14,16 @@ document.querySelectorAll('.section-images__wrapper')
                 return;
             item.classList.toggle('section-images__wrapper-large');
         }));
+
+// Ez a funkció azért szükséges, mert a CSS attr() függvénye jelenleg még
+// csak a content property-hez használható.
+function attributeToStyleProperty(selector, attribute, property, format = (value) => value) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((element) => {
+        const value = element.getAttribute(attribute);
+        if (value)
+            element.style.setProperty(property, format(value));
+    });
+}
+attributeToStyleProperty('.contrast-bg', 'data-bg-url', '--bg-image', (value) => `url(${value})`);
+attributeToStyleProperty('.section-images__wrapper img', 'data-pos', 'object-position')
