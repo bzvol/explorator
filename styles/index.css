@@ -20,7 +20,7 @@ body.preload * {
     -o-transition: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, figure {
     margin-bottom: 0;
 }
 
@@ -179,6 +179,18 @@ section {
 
 .section-videos__title h3 {
     font-size: 1em;
+}
+
+.section-videos__wrapper {
+    width: 16em;
+    padding: .5rem;
+    background: #0f0f0f;
+    box-shadow: 0 .5rem .25rem rgba(0, 0, 0, 0.25);
+}
+
+.section-videos__wrapper figcaption {
+    font-size: 0.8em;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
