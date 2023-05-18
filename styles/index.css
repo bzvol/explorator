@@ -152,7 +152,6 @@ section {
     height: 15em;
     width: 11.25em;
     object-fit: cover;
-    object-position: attr(data-pos, center);
 }
 
 .section-images__wrapper-large {
@@ -191,6 +190,10 @@ section {
 .section-videos__wrapper figcaption {
     font-size: 0.8em;
     text-align: center;
+}
+
+.section-videos__wrapper video {
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
