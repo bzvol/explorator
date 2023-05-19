@@ -18,3 +18,4 @@ function attributeToStyleProperty(selector, attribute, property, format = (value
     });
 }
 attributeToStyleProperty('.contrast-bg', 'data-bg-url', '--bg-image', (value) => `url(${value})`);
+attributeToStyleProperty('.contrast-bg', 'data-bg-pos', '--bg-position');

@@ -42,7 +42,7 @@ h1, h2, h3 {
     inset: 0;
     background-image: var(--bg-image);
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: var(--bg-position, center center);
     background-attachment: fixed;
     filter: contrast(0.5);
     z-index: -1;
@@ -161,6 +161,11 @@ section {
 
     .radial-blue-bg {
         --alpha: 0.5;
+    }
+
+    /* a not visited */
+    a:link, a:visited, a:active {
+        color: #0adeff;
     }
 
     .header {
