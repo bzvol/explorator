@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/trips.css">
+    <title>Explorátor</title>
+</head>
+<body class="preload">
+    <header class="header container-fluid p-3 d-md-flex">
+        <h1 class="text-center">Az explorátor</h1>
+        <button class="header__nav-open header__nav-toggle btn d-md-none"><span class="material-symbols-outlined">menu</span></button>
+        <nav class="header__nav px-md-4 d-md-flex align-items-md-center z-1">
+            <ul class="d-flex flex-column flex-md-row gap-2 gap-md-4 p-4 p-md-0 mb-0">
+                <li><a href="../index.html">Kezdőlap</a></li>
+                <li class="header__nav-current"><a href="#">Utazásaim</a></li>
+                <li><a href="#">Szállás tippek</a></li>
+                <li><a href="#">Közlekedési tippek</a></li>
+            </ul>
+            <button class="header__nav-close header__nav-toggle btn d-md-none"><span class="material-symbols-outlined">close</span></button>
+        </nav>
+    </header>
+
+    <main class="radial-blue-bg">
+        <section>
+            <div class="order-indicator">
+                <div class="order-indicator__year">2018</div>
+                <div class="order-indicator__circle"></div>
+                <span class="order-indicator__plane material-symbols-outlined">flight</span>
+            </div>
+
+            <div class="trips-wrapper">
+                <article class="trip-box">
+                    <h1 class="trip-box__title">Róma és a Vatikán</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut1_1.jpg" alt="Szent Péter-bazilika" data-pos="30%">
+                        <img src="../images/trips/ut1_2.jpg" alt="A Tirrén-tenger" data-pos="20%">
+                    </div>
+                    <h2 class="trip-box__date">2018. július</h2>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="order-indicator">
+                <div class="order-indicator__year">2019</div>
+                <div class="order-indicator__circle"></div>
+                <span class="order-indicator__plane material-symbols-outlined">flight</span>
+            </div>
+
+            <div class="trips-wrapper">
+                <article class="trip-box">
+                    <h1 class="trip-box__title">Kétszer Berlin</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut2_1.jpg" alt="Donkey bringák">
+                        <img src="../images/trips/ut2_2.jpg" alt="A híres Ampelmännchen figura">
+                        <img src="../images/trips/ut2_3.jpg" alt="A Branderburgi kapu">
+                    </div>
+                    <h2 class="trip-box__date">2019. július</h2>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="order-indicator">
+                <div class="order-indicator__year">2020</div>
+                <div class="order-indicator__circle"></div>
+                <span class="order-indicator__plane material-symbols-outlined">flight</span>
+            </div>
+
+            <div class="trips-wrapper">
+                <article class="trip-box">
+                    <h1 class="trip-box__title">Prága</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut3_1.jpg" alt="A Franz Kafka fej">
+                        <img src="../images/trips/ut3_2.jpg" alt="David Černý Miminka babái">
+                    </div>
+                    <h2 class="trip-box__date">2020. július</h2>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="order-indicator">
+                <div class="order-indicator__year">2021</div>
+                <div class="order-indicator__circle"></div>
+                <span class="order-indicator__plane material-symbols-outlined">flight</span>
+            </div>
+
+            <div class="trips-wrapper">
+                <article class="trip-box">
+                    <h1 class="trip-box__title">A nagy francia-spanyol roadtrip</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut4_1.jpg" alt="Pancorbo, Montes Obarenes-San Zadornil">
+                        <img src="../images/trips/ut4_2.jpg" alt="Tengerparti ebéd">
+                    </div>
+                    <h2 class="trip-box__date">2021. augusztus</h2>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="order-indicator">
+                <div class="order-indicator__year">2022</div>
+                <div class="order-indicator__circle"></div>
+                <span class="order-indicator__plane material-symbols-outlined">flight</span>
+            </div>
+
+            <div class="trips-wrapper">
+                <article class="trip-box">
+                    <h1 class="trip-box__title">Egyedül Londonban</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut5_1.jpg" alt="The Shard">
+                        <img src="../images/trips/ut5_2.jpg" alt="Canary Wharf a távolban" data-pos="20%">
+                    </div>
+                    <h2 class="trip-box__date">2022. április</h2>
+                </article>
+                <article class="trip-box">
+                    <h1 class="trip-box__title">Érettségi bónusz: Bécs</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut6_1.jpg" alt="Tetőkerti pihenés">
+                        <img src="../images/trips/ut6_2.jpg" alt="Reggeli az erkélyen">
+                        <img src="../images/trips/ut6_3.jpg" alt="Utazás a Business osztályon">
+                    </div>
+                    <h2 class="trip-box__date">2022. június</h2>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="order-indicator">
+                <div class="order-indicator__year">2023</div>
+                <div class="order-indicator__circle"></div>
+                <span class="order-indicator__plane material-symbols-outlined">flight</span>
+            </div>
+
+            <div class="trips-wrapper">
+                <article class="trip-box">
+                    <h1 class="trip-box__title">Hollandia: nosztalgia</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut7_1.jpg" alt="Rotterdam folyópartja">
+                        <img src="../images/trips/ut7_2.jpg" alt="Rotterdam, Het Nieuwe Instituut">
+                    </div>
+                    <h2 class="trip-box__date">2023. február</h2>
+                </article>
+                <article class="trip-box">
+                    <h1 class="trip-box__title">Varsó: koncert és felhőkarcolók</h1>
+                    <div class="trip-box__gallery">
+                        <img src="../images/trips/ut8_1.jpg" alt="Focus koncert" data-pos="10%">
+                        <img src="../images/trips/ut8_2.jpg" alt="A varsói Királyi palota">
+                        <img src="../images/trips/ut8_3.jpg" alt="Egy varsói felhőkarcoló">
+                    </div>
+                    <h2 class="trip-box__date">2023. március</h2>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="../scripts/global.js"></script>
+    <script src="../scripts/trips.js"></script>
+</body>
+</html>
