@@ -1,0 +1,48 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(105% - 80px);
+}
+
+.acc-title {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+.acc-desc {
+    padding: 1rem;
+    width: min(100%, 700px);
+}
+
+.article-grid-wrapper {
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+    margin: 1rem 0;
+}
+
+.article-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+}
+
+article h2 {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+figure {
+    place-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .article-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
