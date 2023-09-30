@@ -7,6 +7,25 @@ document.querySelectorAll('.header__nav-toggle')
         item.addEventListener('click', () => 
             nav.classList.toggle('header__nav-active')));
 
+const lsmBtn = document.querySelector('.header__nav-lsm-btn');
+let largeScaleMode = false;
+let updateTripsEvent = null;
+lsmBtn.addEventListener('click', () => {
+    largeScaleMode = !largeScaleMode;
+    const rootStyle = document.documentElement.style;
+    if (largeScaleMode) {
+        rootStyle.setProperty('font-size', '30px');
+        rootStyle.setProperty('filter', 'contrast(120%)');
+    }
+    else {
+        rootStyle.removeProperty('font-size');
+        rootStyle.removeProperty('filter');
+    }
+    
+    if (updateTripsEvent)
+        updateTripsEvent();
+});
+
 // Ez a funkció azért szükséges, mert a CSS attr() függvénye jelenleg még
 // csak a content property-hez használható.
 function attributeToStyleProperty(selector, attribute, property, format = (value) => value) {

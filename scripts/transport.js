@@ -25,8 +25,14 @@ form.onsubmit = (e) => {
           passengers = data.get('passengers'),
           cabinClass = data.get('cabinclass');
 
+    if (from === to) {
+        alert("Kérlek válassz ki két különböző helyszínt!");
+        return;
+    }
+
     console.log(from, to, dateFrom, dateTill, passengers, cabinClass);
 
-    const url = `https://www.skyscanner.com/transport/flights/${from}/${to}/${dateFrom}/${dateTill}/?adultsv2=${passengers}&cabinclass=${cabinClass}`;
+    const url = `https://www.skyscanner.com/transport/flights/${from}/${to}/${dateFrom}/${dateTill}/` +
+                `?adultsv2=${passengers}&cabinclass=${cabinClass}`;
     window.open(url, '_blank');
 };

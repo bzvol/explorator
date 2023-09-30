@@ -14,7 +14,8 @@
     <header class="header container-fluid p-3 d-md-flex">
         <h1 class="text-center">Az explorátor</h1>
         <button class="header__nav-open header__nav-toggle btn d-md-none"><span class="material-symbols-outlined">menu</span></button>
-        <nav class="header__nav px-md-4 d-md-flex align-items-md-center z-1">
+        <nav class="header__nav px-md-4 d-flex align-items-md-center flex-column-reverse flex-md-row gap-2 gap-md-3 z-1">
+            <button class="header__nav-lsm-btn btn px-4 pb-3 p-md-0"><span class="material-symbols-outlined">eyeglasses</span></button>
             <ul class="d-flex flex-column flex-md-row gap-2 gap-md-4 p-4 p-md-0 mb-0">
                 <li><a href="../index.html">Kezdőlap</a></li>
                 <li><a href="trips.html">Utazásaim</a></li>
@@ -50,9 +51,9 @@
                         ültetésével.
                     </p>
                     <p>
-                        Tanácsom, hogy <b><u>sohase</u></b> foglaljunk közvetítő oldalról, csak mert pár ezer forinttal olcsóbb.
+                        Tanácsom, hogy <b>sohase</b> foglaljunk közvetítő oldalról, csak mert pár ezer forinttal olcsóbb.
                         Ezek az oldalak a legtöbb esetben problémásak lehetnek, ha valamilyen problémával:
-                        visszatérítéssel, módosítással fordulunk hozzájuk. Ehelyett <b><u>minden</u></b> esetben az adott
+                        visszatérítéssel, módosítással fordulunk hozzájuk. Ehelyett <b>minden</b> esetben az adott
                         légitársaság oldalán foglaljuk le jegyünket.
                     </p>
                     <p>
@@ -140,27 +141,29 @@
                             <div class="d-flex gap-4">
                                 <div class="d-flex flex-column gap-3">
                                     <div>
-                                        <label for="name">Név</label><br/>
+                                        <label for="k__name">Név</label><br>
                                         <input type="text" id="k__name" name="name" placeholder="Név">
                                     </div>
                                 
                                     <div>
-                                        <label for="email">E-mail cím</label><br/>
+                                        <label for="k__email">E-mail cím</label><br>
                                         <input type="email" id="k__email" name="email" placeholder="E-mail cím">
                                     </div>
                                 
                                     <div class="d-flex gap-2">
                                         <div>
-                                            <label for="from">Honnan</label>
+                                            <label for="k__from">Honnan</label>
                                             <select name="from" id="k__from" required>
+                                                <option value="">Válassz egyet!</option>
                                                 <option value="bud">BUD | Budapest</option>
                                                 <option value="lond">ANY | London</option>
                                                 <option value="ber">BER | Berlin</option>
                                             </select>
                                         </div>
                                         <div>
-                                            <label for="to">Hova</label>
+                                            <label for="k__to">Hova</label>
                                             <select name="to" id="k__to" required>
+                                                <option value="">Válassz egyet!</option>
                                                 <option value="ber">BER | Berlin</option>
                                                 <option value="lond">ANY | London</option>
                                                 <option value="pari">ANY | Párizs</option>
@@ -173,11 +176,11 @@
                                     </div>
                                     <div class="d-flex gap-2">
                                         <div>
-                                            <label for="date-from">Mettől</label>
+                                            <label for="k__date-from">Mettől</label>
                                             <input type="date" id="k__date-from" name="date-from" required>
                                         </div>
                                         <div>
-                                            <label for="date-till">Meddig</label>
+                                            <label for="k__date-till">Meddig</label>
                                             <input type="date" id="k__date-till" name="date-till" required>
                                         </div>
                                     </div>
@@ -188,20 +191,20 @@
                                 </div>
                                 <div class="d-flex flex-column gap-3">
                                     <div>
-                                        <label for="passengers">Utasok száma</label>
+                                        <label for="k__passengers">Utasok száma</label>
                                         <input type="number" id="k__passengers" name="passengers" min="1" max="4" value="1" style="width: 2rem;">
                                     </div>
                                     <div>
-                                        <input type="radio" name="cabinclass" id="k__rb-economy" value="economy" checked><label for="economy">Turistaosztály</label><br/>
-                                        <input type="radio" name="cabinclass" id="k__rb-business" value="business"><label for="business">Üzleti osztály</label><br/>
-                                        <input type="radio" name="cabinclass" id="k__rb-premium-economy" value="premium_economy"><label for="premium-economy">Prémium turistaosztály</label><br/>
+                                        <input type="radio" name="cabinclass" id="k__rb-economy" value="economy" checked><label for="k__rb-economy">Turistaosztály</label><br>
+                                        <input type="radio" name="cabinclass" id="k__rb-business" value="business"><label for="k__rb-business">Üzleti osztály</label><br>
+                                        <input type="radio" name="cabinclass" id="k__rb-premium-economy" value="premium_economy"><label for="k__rb-premium-economy">Prémium turistaosztály</label><br>
                                     </div>
                                     <div>
+                                        <label for="k__luggage">Poggyászal</label>
                                         <input type="checkbox" name="luggage" id="k__luggage">
-                                        <label for="luggage">Poggyászal</label>
                                     </div>
                                     <div>
-                                        <label for="message">Megjegyzés</label>
+                                        <label for="k__message">Megjegyzés</label>
                                         <textarea name="message" id="k__message" cols="30" rows="4" placeholder="Ide írhatod a megjegyzésed."></textarea>
                                     </div>
                                 </div>

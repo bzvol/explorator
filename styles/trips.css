@@ -52,6 +52,7 @@ section {
     gap: 2rem;
     text-align: center;
     padding: .75rem;
+    max-width: 82%;
 }
 
 .trip-box {
@@ -110,6 +111,7 @@ section {
         gap: 3rem;
         padding: 2rem;
         flex-wrap: wrap;
+        max-width: 83%;
     }
 
     .trip-box__title {
