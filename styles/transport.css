@@ -8,6 +8,7 @@ main {
     align-items: center;
     padding: 1rem;
     min-height: calc(105% - 80px);
+    font-size: 1rem;
 }
 
 .tr-title {
@@ -76,9 +77,10 @@ article h2 {
         grid-template-columns: unset;
         grid-template-rows: unset;
         grid-template-areas:
-            "r v a"
-            "r k k"
-            "r b c";
+            "r r"
+            "k k"
+            "v b"
+            "a c";
     }
 
     .article__r { grid-area: r; }
@@ -87,6 +89,20 @@ article h2 {
     .article__a { grid-area: a; }
     .article__c { grid-area: c; }
     .section__k { grid-area: k; }
+}
+
+@media screen and (min-width: 1200px) {
+    .article-grid {
+        display: inline-grid;
+        justify-content: unset;
+        align-items: unset;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        grid-template-areas:
+            "r v a"
+            "r k k"
+            "r b c";
+    }
 }
 
 @media (prefers-color-scheme: dark) {

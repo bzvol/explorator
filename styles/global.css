@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     font-family: 'Crimson Text', serif;
     font-size: 20px;
@@ -51,6 +55,21 @@ h1, h2, h3 {
 .header {
     position: relative;
     border-bottom: 2px solid #ccc;
+}
+
+.header__skip-to-main {
+    position: absolute;
+    background: black;
+    color: white;
+    padding: .5rem;
+    font-size: 1.2rem;
+    border-radius: 0 0 .375rem .375rem;
+
+    transform: translateY(calc(-100% - 1rem));
+    transition: transform .3s ease-in;
+}
+.header__skip-to-main:focus {
+    transform: translateY(-1rem);
 }
 
 .header__nav-open {
@@ -101,6 +120,7 @@ h1, h2, h3 {
 .header__nav a {
     color: inherit;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .header__nav-current {
@@ -190,6 +210,11 @@ section {
 
     .header {
         border-color: #fff;
+    }
+
+    .header__skip-to-main {
+        background: #fff;
+        color: #000 !important;
     }
 
     .header h1, .header__nav-current {

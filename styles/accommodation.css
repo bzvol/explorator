@@ -8,6 +8,7 @@ main {
     align-items: center;
     padding: 1rem;
     min-height: calc(105% - 80px);
+    font-size: 1rem;
 }
 
 .acc-title {
