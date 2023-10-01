@@ -28,3 +28,24 @@ p.dialogue {
     cursor: help;
     border-bottom: 2px dotted black;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+
+    p, div.block {
+        background-color: #444;
+        border: 1px solid #eee;
+    }
+
+    p.dialogue {
+        background-color: #333;
+        border: 1px dashed #eee;
+    }
+
+    [title] {
+        border-bottom: 2px dotted white;
+    }
+}
