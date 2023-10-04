@@ -14,7 +14,7 @@ lsmBtn.addEventListener('click', () => {
     largeScaleMode = !largeScaleMode;
     const rootStyle = document.documentElement.style;
     if (largeScaleMode) {
-        rootStyle.setProperty('font-size', '30px');
+        rootStyle.setProperty('font-size', '1.875rem');
         rootStyle.setProperty('filter', 'contrast(120%)');
     }
     else {

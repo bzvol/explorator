@@ -15,6 +15,7 @@ main {
     text-align: center;
     margin: .5rem 0 2rem;
     font-size: 2rem;
+    color: white;
 }
 
 .tr-desc {
@@ -110,3 +111,11 @@ article h2 {
         background: rgba(0, 0, 0, 0.4);
     }
 }
+
+@media (prefers-color-scheme: light) {
+    a:link:not(.header__nav a), a:hover:not(.header__nav a),
+    a:active:not(.header__nav a), a:visited:not(.header__nav a) {
+        color: revert !important;
+    }
+}
+

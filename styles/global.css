@@ -12,7 +12,7 @@ html {
 
 html, body {
     font-family: 'Crimson Text', serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     height: 100%;
 }
 
@@ -31,6 +31,14 @@ h1, h2, h3, h4, h5, h6, figure {
 h1, h2, h3 {
     font-family: 'Merienda', cursive;
     font-weight: 700;
+}
+
+a:link, a:hover, a:active {
+    color: #add8e6 !important;
+}
+
+a:visited {
+    color: #b3b3ff !important;
 }
 
 .radial-blue-bg {
@@ -83,7 +91,7 @@ h1, h2, h3 {
     right: 1rem;
     bottom: 1rem;
 
-    font-size: 1.7em;
+    font-size: 1.7rem;
 }
 
 .header__nav {
@@ -118,7 +126,7 @@ h1, h2, h3 {
 }
 
 .header__nav a {
-    color: inherit;
+    color: inherit !important;
     text-decoration: none;
     font-size: 1rem;
 }
@@ -154,7 +162,7 @@ h1, h2, h3 {
 }
 
 .header__nav-lsm-btn > span {
-    font-size: 1.6em;
+    font-size: 1.6rem;
     padding-top: .25rem;
 }
 
@@ -203,18 +211,8 @@ section {
         --alpha: 0.5;
     }
 
-    /* a not visited */
-    a:link, a:visited, a:active {
-        color: #0adeff;
-    }
-
     .header {
         border-color: #fff;
-    }
-
-    .header__skip-to-main {
-        background: #fff;
-        color: #000 !important;
     }
 
     .header h1, .header__nav-current {
